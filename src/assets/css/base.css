@@ -5,7 +5,7 @@
   --color-text: #666;
   --color-high-text: #ff5777;
   --color-tint: #ff8198;
-  --color-background: #fff;
+  --color-background:  rgb(84, 92, 100);
   --font-size: 14px;
   --line-height: 1.5;
 }
@@ -27,19 +27,19 @@ body {
   /* rem vw/vh */
   width: 100vw;
   height: 100vh;
+  /* overflow: hidden; */
 }
 
 a {
   text-decoration: none;
 }
 
-.clearfix::before,
-.clearfix::after {
-  content: '';
-  display: table;
-  clear: both;
+
+.el-breadcrumb{
+  padding-bottom: 20px;
 }
 
-.clearfix {
-  zoom: 1;
+.el-table{
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

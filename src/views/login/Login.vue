@@ -60,15 +60,17 @@ export default {
       this.$refs.loginFormRef.resetFields()
     },
     login() {
-      this.$refs.loginFormRef.validate((valid, obj) => {
+      this.$refs.loginFormRef.validate(valid => {
         if (!valid) return
         getlogindata(this.loginForm.username, this.loginForm.password).then(res => {
+          console.log(res);
+          
           if (res.meta.status != 200) return this.$message.error('登录失败')
           this.$message.success('登录成功')
 
           // 将登录成功之后的token,保存到客户端的sessionStorage中
           // token只在当前网站打开期间生效,所以将token保存在sessionStroage中
-          window.sessionStorage.setItem('token', res.data.token)
+          window.sessionStorage.setItem('mytoken', res.data.token)
           this.$router.push('/home')
         })
       })
