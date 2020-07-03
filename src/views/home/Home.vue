@@ -1,7 +1,7 @@
 <template>
-  <div class="home_outter">
+  <div>
     <!-- 整个container -->
-    <el-container class="home_container">
+    <el-container>
       <!-- 头部 -->
       <el-header>
         <div class="header_left">
@@ -13,7 +13,7 @@
         </div>
       </el-header>
 
-      <el-container>
+      <el-container class="content-container">
         <!-- 左边导航栏 -->
         <el-aside :width="asideWidth + 'px'">
           <!-- 伸缩条 -->
@@ -107,10 +107,7 @@ export default {
 }
 </script>
 <style lang="less">
-.home_outter,
-.home_container {
-  height: 100%;
-}
+
 .el-header {
   background-color: rgb(84, 92, 90);
   color: #333;
